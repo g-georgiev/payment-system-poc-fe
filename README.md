@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# Payment System POC FE
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Setup instructions
+1. Pull the [BE project](https://github.com/g-georgiev/payment-system/tree/dev).
+2. Compose the necessary containers, build and start the app by running ``docker-compose up`` in the BE root folder.
+3. Pull the FE project.
+4. Build and serve the FE project by running ``npm start`` in the root folder of the project.
 
 ## Available Scripts
 
