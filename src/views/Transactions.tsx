@@ -18,8 +18,7 @@ const Transactions: React.FC = () => {
         referenceId: '',
         customerEmail: '',
         customerPhone: '',
-        amount: 0,
-        merchantId: JSON.parse(localStorage.getItem("merchant") as string).data.id
+        amount: 0
     });
 
     useEffect(() => {
@@ -45,8 +44,7 @@ const Transactions: React.FC = () => {
                 referenceId: '',
                 customerEmail: '',
                 customerPhone: '',
-                amount: 0,
-                merchantId: JSON.parse(localStorage.getItem("merchant") as string).data.id
+                amount: 0
             });
         } catch (error) {
             console.error('Error creating transaction:', error);

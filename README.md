@@ -4,7 +4,8 @@
 1. Pull the [BE project](https://github.com/g-georgiev/payment-system/tree/dev).
 2. Compose the necessary containers, build and start the app by running ``docker-compose up`` in the BE root folder.
 3. Pull the FE project.
-4. Build and serve the FE project by running ``npm start`` in the root folder of the project.
+4. Build FE project: ``npm install``
+5. Serve the FE project: ``npm start`` 
 
 ## Available Scripts
 

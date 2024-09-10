@@ -2,18 +2,6 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {jwtDecode} from 'jwt-decode';
 import api from '../utils/api';
-
-interface Merchant {
-    "userType": string;
-    "id": bigint;
-    "username": string;
-    "name": string;
-    "email": string;
-    "description": string;
-    "status": string;
-    "totalTransactionSum": number;
-}
-
 const Login: React.FC = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -30,9 +18,6 @@ const Login: React.FC = () => {
             // Decode JWT to get user role
             const payload = jwtDecode(token);
 
-            // @ts-ignore
-            console.log(localStorage.getItem('merchant')["id"]);
-
             //console.log(payload);
             // @ts-ignore
             const role: any = payload['role'];
@@ -40,9 +25,6 @@ const Login: React.FC = () => {
             if (role === 'ADMIN') {
                 navigate('/merchants');
             } else if (role === 'MERCHANT') {
-                let merchant = await api.get<Merchant>('/merchant/current');
-                localStorage.setItem('merchant', JSON.stringify(merchant));
-
                 navigate('/transactions');
             }
         } catch (err) {
